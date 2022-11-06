@@ -3,52 +3,33 @@
 @section('content')
 <h1>Patient Appointment</h1>
 
+<div class="container">
 
-<form action="">
+    <form action="{{route('appointment.store')}}" method="post">
+        @csrf
+        <div>
+            <label for="user_id">User Id</label>
+            <input type="text" class="form-control" name="user" placeholder="User Id">
 
-<div>
-    <label for="name">Enter your Name</label>
-    <input type="text" class="form-control" id="name" placeholder="enter your name">
-    
+        </div>
+
+        <div>
+            <label for="doctor_id">Doctor Id</label>
+            <input type="text" class="form-control" name="doctor_id" placeholder="Doctor Id">
+
+        </div>
+        <div>
+            <label for="fees">Fees</label>
+            <input type="text" class="form-control" name="fees" placeholder="Fees">
+
+        </div>
+       
+<input type="submit" class="mt-3 btn btn-info" value="submit">
+
+
+    </form>
+
+
 </div>
-
-<div>
-    <label for="mobile number">Enter your mobile number</label>
-    <input type="text" class="form-control" id="mobile number" placeholder="mobile number">
-    
-</div>
-<div>
-    <label for="doctor name">Enter your doctor name</label>
-    <input type="text" class="form-control" id="mobile number" >
-    
-</div>
-<div>
-    <label for="doctor picture">doctor picture/label>
-    <input type="file" class="form-control" id="doctor picture" >
-    
-</div>
-<div>
-    <label for="branch name">Enter branch name</label>
-    <input type="text" class="form-control" id="branch name" placeholder="branch name">
-    
-    
-    <select name="" id="branch name">
-        <option value="">uttara</option>
-        <option value="">banani</option>
-        <option value="">gulshan</option>
-    </select>
-    
-    
-  
-</div>
-<div>
-<input type="submit" class="mt-3">
-</div>
-
-
-
-</form>
-
-
 
 @endsection

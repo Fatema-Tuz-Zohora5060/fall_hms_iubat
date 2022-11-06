@@ -20,10 +20,15 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Appointments
                             </a>
-                            <a class="nav-link" href="{{url('/medicalRecords')}}">
+                            <a class="nav-link" href="{{url('/specialist')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Medical Records
+                                Specialist
                             </a>
+                            <a class="nav-link" href="{{url('/specialist')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Chember
+                            </a>
+                          
                             
                         </div>
                     </div>
