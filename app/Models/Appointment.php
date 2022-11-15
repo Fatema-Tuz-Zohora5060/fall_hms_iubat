@@ -11,4 +11,9 @@ class Appointment extends Model
 
     // protected $fillable = ["user_id"];
     protected $guarded = [];
+
+
+    public function doctor(){
+        return $this->belongsTo(Doctor::class);
+    }
 }

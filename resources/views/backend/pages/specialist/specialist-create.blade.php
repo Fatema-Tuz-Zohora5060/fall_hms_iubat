@@ -5,13 +5,13 @@
         
         <div>
             <label for="specialized_id">User Id</label>
-            <input type="text" class="form-control" name="specialized_id" placeholder="pecialized_id">
+            <input type="text" class="form-control" name="specialized_id" placeholder="specialized_id">
 
             </div>
 
         <div>
             <label for="specialized_name">Doctor Id</label>
-            <input type="text" class="form-control" name="specialized_name" placeholder="specialized_department">
+<input type="text" class="form-control" name="specialized_name" placeholder="specialized_department">
 
         </div>
         <div>
@@ -27,7 +27,6 @@
 
 
 </div>
-
 
 @endsection
 

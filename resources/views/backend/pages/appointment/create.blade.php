@@ -5,7 +5,7 @@
 
 <div class="container">
 
-    <form action="{{route('appointment.store')}}" method="post">
+    <form action="{{route('appointment.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div>
             <label for="user_id">User Id</label>
@@ -14,8 +14,24 @@
         </div>
 
         <div>
-            <label for="doctor_id">Doctor Id</label>
-            <input type="text" class="form-control" name="doctor_id" placeholder="Doctor Id">
+            <label for="doctor_id">Doctor Name</label>
+            <input type="text"class="form-control" placeholder="enter your doctor name">
+            </div>
+
+            <div>
+             <label for="image">image</label>
+              <input type="file" class="form-control">
+
+
+            </div>
+
+
+            
+      <select name="doctor_name" id="" class="form-control">
+      @foreach($doctors as $doctor)
+                <option value="{{$doctor->id}}">{{$doctor->doctor_name}}</option>
+       @endforeach
+  </select>
 
         </div>
         <div>

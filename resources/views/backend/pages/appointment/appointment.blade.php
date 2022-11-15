@@ -2,12 +2,14 @@
 
 @section('content')
 <h1>Appointment List</h1>
+
 <a class="btn btn-success" href="{{url('appointment/create')}}">Registration Form</a>
 <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Doctor_id</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">image</th>
             <th scope="col">User_id</th>
             <th scope="col">Fees</th>
             <th scope="col">Action</th>
@@ -15,14 +17,17 @@
         </thead>
         <tbody>
 
-
-        
-        @foreach($apps as $data)
+{{-- {{$data->doctors->doctor_name}} --}}
+       
+        @foreach($apps as $key=>$data)
         
         <tr>
-            <th scope="row">{{$data->id}}</th>
+       
+            <th scope="row">{{$key +1}}</th>
+
+            <td>{{$data->doctor->doctor_name}}</td>
+            <td>{{$data->image}}</td>
             <td>{{$data->user_id}}</td>
-          <td>{{$data->doctor_id}}</td>
             <td>{{$data->fees}}</td>
             
     
