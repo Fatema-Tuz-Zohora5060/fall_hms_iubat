@@ -8,22 +8,30 @@ use Illuminate\Http\Request;
 class SpecialistController extends Controller
 {
 
-public function list(){
+public function list (){
+    $list=Specialist::paginate(2);
 
-    return view('backend.pages.specialist.specialist');
+    return view("backend.pages.specialist.specialist",compact('list'));
 }
 
 public function form(){
-    return view('backend.pages.specialist.specialist-create');
+    
+    
+  
+ return view("backend.pages.specialist.specialist-create");
 }
-public function add(Request $req){
+   
 
+public function store(Request $req){
     Specialist::create([
-        "specialized_id" => $req->specialized_id,
-        "specialized_name" => $req->specialized_name,
-        "specialized_department" => $req->specialized_department,
+        "id" => $req->id,
+        "name" =>$req->name,
+        "status" => $req->status,
+        "description" => $req->description,
+        
     ]);
+    return redirect()->route('specialist');
 
-        return redirect()->back();
 }
+
 }

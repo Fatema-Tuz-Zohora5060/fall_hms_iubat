@@ -15,35 +15,30 @@
 
         <div>
             <label for="doctor_id">Doctor Name</label>
-            <input type="text"class="form-control" placeholder="enter your doctor name">
-            </div>
 
-            <div>
-             <label for="image">image</label>
-              <input type="file" class="form-control">
-
-
-            </div>
-
-
-            
-      <select name="doctor_name" id="" class="form-control">
-      @foreach($doctors as $doctor)
+            <select name="doctor_name" id="" class="form-control">
+                @foreach($doctors as $doctor)
                 <option value="{{$doctor->id}}">{{$doctor->doctor_name}}</option>
-       @endforeach
-  </select>
-
+                @endforeach
+            </select>
         </div>
-        <div>
-            <label for="fees">Fees</label>
-            <input type="text" class="form-control" name="fees" placeholder="Fees">
 
-        </div>
-       
+
+
+
+
+
+</div>
+<div>
+    <label for="fees">Fees</label>
+    <input type="text" class="form-control" name="fees" placeholder="Fees">
+
+</div>
+
 <input type="submit" class="mt-3 btn btn-info" value="submit">
 
 
-    </form>
+</form>
 
 
 </div>

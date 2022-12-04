@@ -9,4 +9,9 @@ class Doctor extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function doctor_specialist (){
+        return $this->belongsTo(Specialist::class,);
+    }
+    
 }

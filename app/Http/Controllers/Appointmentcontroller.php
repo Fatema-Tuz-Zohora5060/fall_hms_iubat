@@ -33,6 +33,25 @@ public function store(Request $req){
     return redirect()->route("appointment");
 }
 
+public function deleteAppointment($id){
+
+$app=Appointment::find($id);
+$app->delete();
+return redirect()->back();
+   
+}
+ public function viewAppointment($id){
+ $app=Appointment::find($id);
+ return view('backend.pages.appointment.view',compact('app'));
+ }
+ public function edit($appointment_id)
+     {
+        $app=Appointment::find($appointment_id);
+       
+        return view('backend.pages.appointment.edit',);}
 
 
+
+
+ 
 }

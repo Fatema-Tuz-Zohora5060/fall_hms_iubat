@@ -10,5 +10,4 @@ class Specialist extends Model
     use HasFactory;
     
     protected $guarded = [];
-
 }
