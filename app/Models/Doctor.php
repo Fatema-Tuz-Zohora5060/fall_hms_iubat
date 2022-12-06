@@ -11,7 +11,7 @@ class Doctor extends Model
     protected $guarded = [];
 
     public function doctor_specialist (){
-        return $this->belongsTo(Specialist::class,);
+        return $this->belongsTo(Specialist::class,'specialist','id');
     }
     
 }

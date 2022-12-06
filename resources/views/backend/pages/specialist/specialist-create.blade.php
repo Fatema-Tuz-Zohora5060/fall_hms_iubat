@@ -11,22 +11,22 @@
    
     <div>
         <label for="specialized_name">Name</label>
-        <input type="text" class="form-control" name="name" placeholder="specialized_name">
-
+        <input type="text" class="form-control" name="name" placeholder="DoctorName">
+    </div>
+    <div>
+        <label for="specialized_department">Specialist at</label>
+        <input type="text" class="form-control" name="specialist_at" placeholder="specialized_department">
 
     </div>
-    <div class="form-group">
+     <div class="form-group">
             <label for="">Select Status</label>
             <select name="status" id="" class="form-control">
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
             </select>
 
-    <div>
-        <label for="specialized_department">Description</label>
-        <input type="text" class="form-control" name="description" placeholder="specialized_department">
 
-    </div>
+   
     <input type="submit" class="mt-3 btn btn-info" value="submit">
 
 

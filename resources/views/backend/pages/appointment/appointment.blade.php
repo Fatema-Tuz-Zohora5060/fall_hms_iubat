@@ -29,7 +29,14 @@
        
             <th scope="row">{{$key +1}}</th>
 
+            
+            <td>{{$data->mobile}}</td>
+            <td>{{$data->date}}</td>
+            <td>{{$data->address}}</td>
+            <td>{{$data->email}}</td>
+            <td>{{$data->email}}</td>
             <td>{{$data->doctor->doctor_name}}</td>
+          
           
             
             

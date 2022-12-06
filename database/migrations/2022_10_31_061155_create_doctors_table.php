@@ -17,12 +17,11 @@ class CreateDoctorsTable extends Migration
             $table->id();
         
             $table->string("doctor_name",50);
-            $table->string("specialist",20);
+            $table->foreignId("specialist");
             $table->string("image");
             $table->string("number",20);
             $table->text("address")->nullable();
-            $table->string("fees",4)->default("0.0");
-            $table->timestamps();
+           $table->timestamps();
         });
     }
 

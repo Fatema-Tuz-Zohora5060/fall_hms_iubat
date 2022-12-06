@@ -12,9 +12,7 @@ class Appointmentcontroller extends Controller
 
         $apps=Appointment::all();
      
-
-
-        return view('backend.pages.appointment.appointment',compact('apps'));
+       return view('backend.pages.appointment.appointment',compact('apps'));
        
     }
 public function create(){
@@ -24,9 +22,13 @@ public function create(){
 public function store(Request $req){
 
     Appointment::create([
-        "user_id" => $req->user,
+        "name" => $req->name,
+        "mobile" => $req->mobile,
+        "date" => $req->date,
+        "address"=>$req->address,
+        "email"=>$req->email,
         "doctor_id" => $req->doctor_name,
-        "fees" => $req->fees,
+
     ]);
     
 

@@ -15,14 +15,14 @@
     @csrf
     <div>
         <label for="name">Name</label>
-        <input type="text" class="form-control" name="doctorName" placeholder="Enter your name">
+        <input type="text" class="form-control" name="doctorName" placeholder="Enter doctor name">
     </div>
     <div>
         <label for="name">Specialist</label>
 
         <select name="specialist" id="" class="form-control">
             @foreach($specials as $data)
-            <option value="{{$data->id}}">{{$data->name}}</option>
+            <option value="{{$data->id}}">{{$data->specialist_at}}</option>
 
             @endforeach
 

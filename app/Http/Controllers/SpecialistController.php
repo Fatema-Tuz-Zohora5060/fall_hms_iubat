@@ -27,7 +27,7 @@ public function store(Request $req){
         "id" => $req->id,
         "name" =>$req->name,
         "status" => $req->status,
-        "description" => $req->description,
+        "specialist_at" => $req->specialist_at,
         
     ]);
     return redirect()->route('specialist');

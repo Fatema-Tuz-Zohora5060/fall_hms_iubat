@@ -13,7 +13,7 @@ class Doctorcontroller extends Controller
 
         //    $dogs=Doctor::all();
 
-        $dogs = Doctor::paginate(5);
+        $dogs = Doctor::with('doctor_specialist')->paginate(5);
 
         // dd($dogs);
         return view("backend.pages.doctor.doctor", compact('dogs'));
@@ -56,12 +56,13 @@ class Doctorcontroller extends Controller
             "image" => $fileName,
             "number" => $req->doctorNumber,
             "address" => $req->doctorAddress,
-            "fees" => $req->fees
+           
         ]);
 
 
         return redirect()->back()->with('message', 'form Created Successful.');
     }
+    //view update edit delete er kaaj
 
     public function deleteDoctor($id)
     {
@@ -70,6 +71,7 @@ class Doctorcontroller extends Controller
         $dogs->delete();
         return redirect()->back();
     }
+
     public function viewDoctor($id)
     {
         $dogs = Doctor::find($id);

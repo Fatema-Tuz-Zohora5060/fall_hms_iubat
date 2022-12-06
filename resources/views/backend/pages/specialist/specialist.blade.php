@@ -9,7 +9,7 @@
       <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Status</th>
-      <th scope="col">Description</th>
+      <th scope="col">specialist_at</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
 
   <td>{{$data->name}}</td>
   <td>{{$data->status}}</td>
-  <td>{{$data->description}}</td>
+  <td>{{$data->specialist_at}}</td>
   <td>
     <a href="" class="btn btn-primary">View</a>
     <a href="" class="btn btn-danger">Delete</a>

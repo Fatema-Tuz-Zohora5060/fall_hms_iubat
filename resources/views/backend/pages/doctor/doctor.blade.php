@@ -23,7 +23,7 @@
     <tr>
       <th scope="row">{{$key + $dogs->firstItem()}}</th>
       <td>{{$data->doctor_name}}</td>
-      <td>{{$data->specialist}}</td>
+      <td>{{$data->doctor_specialist->specialist_at}}</td>
       <td><img width="100px" src="{{url('/uploads/'.$data->image)}}" alt="image"></td>
       <td>{{$data->number}}</td>
       <td>{{$data->address}}</td>
